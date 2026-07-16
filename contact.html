@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0F056B">
+  <meta name="description" content="Contactez Ndeye Penda Sarr — CV Professionnel">
+
+  <!-- Open Graph / Réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Ndeye Penda Sarr">
+  <meta property="og:description" content="Contactez Ndeye Penda Sarr — CV Professionnel">
+  <meta property="og:image" content="https://ndeyependasarr.github.io/Mon_Site_De_CvNPS/Images/profil.jpeg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact — Ndeye Penda Sarr">
+  <meta name="twitter:description" content="Contactez Ndeye Penda Sarr — CV Professionnel">
+  <meta name="twitter:image" content="https://ndeyependasarr.github.io/Mon_Site_De_CvNPS/Images/profil.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/Logo-N-Bleu.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="Fichiers_Css/style.css">
+
+  <title>Contact — NPS — CV</title>
+</head>
+
+<body>
+
+  <a href="#contenu" class="skip-link">Aller au contenu principal</a>
+
+  <header class="header" id="top">
+    <div class="logo-container">
+      <img src="Images/initial-nps-modern-logo.jpg" alt="Logo NPS" class="logo">
+      <p class="site-title">CV — Professionnel</p>
+    </div>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn" aria-label="Ouvrir le menu">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="propos.html">À propos</a></li>
+        <li><a href="loisir.html">Loisirs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <h1 class="contact page-title">Contactez-moi</h1>
+
+    <div class="form">
+      <img src="Images/initial-nps-modern-logo.jpg" alt="Logo NPS">
+
+      <form action="https://formspree.io/f/mjkvpavo" method="post">
+        <p>
+          <label for="firstname">Prénom</label>
+          <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" required class="stylePlaceholder" autocomplete="given-name">
+          <label for="lastname">Nom</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Votre nom" required class="stylePlaceholder" autocomplete="family-name">
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="votre@email.com" required class="stylePlaceholder" autocomplete="email">
+          <label for="num">Téléphone</label>
+          <input type="tel" name="num" id="num" placeholder="+221 7X XXX XX XX" class="stylePlaceholder" autocomplete="tel">
+        </p>
+
+        <label for="comment">Message</label>
+        <textarea name="commentaire" id="comment" maxlength="700" required placeholder="Tapez votre message ici…" class="textarea-placeholder"></textarea>
+
+        <p>
+          <input type="submit" id="envoyer" name="envoyer" value="Soumettre">
+          <input type="reset" id="suprimer" name="suprimer" value="Annuler">
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer-links" aria-label="Réseaux sociaux">
+      <li><a href="https://wa.me/221768845316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://github.com/NdeyePendaSarr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://gitlab.com/NPS_Geek" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-gitlab"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+    <p>&copy; 2024 – 2026 Ndeye Penda Sarr | Tous droits réservés</p>
+  </footer>
+
+  <a href="#top" class="back-to-top" aria-label="Retour en haut de page">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+<!-- Script commun du site -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
