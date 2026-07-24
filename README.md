@@ -1,8 +1,19 @@
 # 💼 Mon Site De CV — NPS
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > **Challenge personnel (2024)** : reproduire fidèlement mon CV conçu sur Canva… en HTML et CSS purs, sans framework ni bibliothèque.
 
-🔗 **Démo en ligne :** https://ndeyependasarr.github.io/Mon_Site_De_CvNPS/
+🔗 **Démo en ligne :** https://ndeyependasarr.github.io/online-cv/
+
+<!--
+📸 TODO : ajoute une capture d'écran ou un GIF du site ici, ça change tout pour un README.
+Exemple une fois l'image ajoutée dans un dossier /screenshots :
+![Aperçu du site](./screenshots/preview.png)
+-->
 
 ## 🎯 L'histoire du projet
 
@@ -33,18 +44,19 @@ Une fois la reproduction terminée, l'idée a grandi : ajouter une page « À pr
 ## 📂 Structure
 
 ```
-Mon_Site_De_Cv/
+online-cv/
 ├── index.html          # Accueil — le CV reproduit depuis Canva
 ├── propos.html         # Présentation, projets, témoignages
 ├── loisir.html         # Loisirs + galerie AGCCI 4 (carrousel)
 ├── contact.html        # Formulaire de contact (Formspree)
-├── 404.html            # Page d'erreur personnalisée
+├── 404.html             # Page d'erreur personnalisée
 ├── Fichiers_Css/
 │   └── style.css       # Feuille de style unique, organisée par page
 ├── js/
-│   └── main.js         # Script commun (menu, carrousel)
-├── Images/             # Ressources optimisées
-└── NPS-Cv-Pro.pdf      # Le CV Canva original
+│   └── main.js          # Script commun (menu, carrousel)
+├── Images/               # Ressources optimisées
+├── NPS-Cv-Pro.pdf       # Le CV Canva original
+└── LICENSE
 ```
 
 ## 🚀 Lancer en local
@@ -52,11 +64,15 @@ Mon_Site_De_Cv/
 Aucune dépendance, aucun build :
 
 ```bash
-git clone https://github.com/NdeyePendaSarr/Mon_Site_De_CvNPS.git
-cd Mon_Site_De_CvNPS
+git clone https://github.com/NdeyePendaSarr/online-cv.git
+cd online-cv
 # Ouvrir index.html dans un navigateur, ou :
 python -m http.server 8000
 ```
+
+## 📄 Licence
+
+Ce projet est sous licence MIT — voir le fichier [LICENSE](./LICENSE) pour plus de détails. Le contenu personnel (CV, textes, images) reste ma propriété ; c'est le code qui est librement réutilisable.
 
 ## 👩🏾‍💻 Autrice
 
