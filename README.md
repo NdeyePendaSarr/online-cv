@@ -9,11 +9,24 @@
 
 🔗 **Démo en ligne :** https://ndeyependasarr.github.io/online-cv/
 
-<!--
-📸 TODO : ajoute une capture d'écran ou un GIF du site ici, ça change tout pour un README.
-Exemple une fois l'image ajoutée dans un dossier /screenshots :
-![Aperçu du site](./screenshots/preview.png)
--->
+## 📸 Aperçu
+
+### Page d'accueil
+
+![Page d'accueil — CV](./screenshots/home-desktop.png)
+
+### Autres pages
+
+| À propos | Loisirs | Contact |
+|---|---|---|
+| ![À propos](./screenshots/propos-thumb.png) | ![Loisirs](./screenshots/loisir-thumb.png) | ![Contact](./screenshots/contact-thumb.png) |
+
+### Version mobile & menu
+
+| Accueil mobile | Menu burger ouvert |
+|---|---|
+| ![Accueil mobile](./screenshots/mobile-home.png) | ![Menu ouvert](./screenshots/mobile-menu-open.png) |
+
 
 ## 🎯 L'histoire du projet
 
@@ -76,7 +89,7 @@ Ce projet est sous licence MIT — voir le fichier [LICENSE](./LICENSE) pour plu
 
 ## 👩🏾‍💻 Autrice
 
-**Ndeye Penda Sarr** — Développeuse Frontend, Dakar 🇸🇳
+**Ndeye Penda Sarr** — Développeuse Web Full-Stack, Dakar 🇸🇳
 
 - GitHub : [@NdeyePendaSarr](https://github.com/NdeyePendaSarr/)
 - GitLab : [@NPS_Geek](https://gitlab.com/NPS_Geek)
