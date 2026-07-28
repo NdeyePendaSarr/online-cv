@@ -7,7 +7,7 @@
 
 > **Challenge personnel (2024)** : reproduire fidèlement mon CV conçu sur Canva… en HTML et CSS purs, sans framework ni bibliothèque.
 
-🔗 **Démo en ligne :** https://ndeyependasarr.github.io/Mon_Site_De_CvNPS/
+🔗 **Démo en ligne :** https://ndeyependasarr.github.io/online-cv/
 
 ## 🎯 L'histoire du projet
 
