@@ -44,11 +44,11 @@ online-cv/
 ├── loisir.html         # Loisirs + galerie AGCCI 4 (carrousel)
 ├── contact.html        # Formulaire de contact (Formspree)
 ├── 404.html             # Page d'erreur personnalisée
-├── Fichiers_Css/
+├── css/
 │   └── style.css       # Feuille de style unique, organisée par page
 ├── js/
 │   └── main.js          # Script commun (menu, carrousel)
-├── Images/               # Ressources optimisées
+├── images/               # Ressources optimisées
 ├── NPS-Cv-Pro.pdf       # Le CV Canva original
 └── LICENSE
 ```
