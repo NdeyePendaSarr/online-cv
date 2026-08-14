@@ -1,4 +1,4 @@
-# 💼 Mon Site De CV — NPS
+# 💼 online-cv — CV professionnel de Ndeye Penda Sarr (NPS)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -8,6 +8,16 @@
 > **Challenge personnel (2024)** : reproduire fidèlement mon CV conçu sur Canva… en HTML et CSS purs, sans framework ni bibliothèque.
 
 🔗 **Démo en ligne :** https://ndeyependasarr.github.io/online-cv/
+
+## 📸 Aperçu
+
+| Accueil (desktop) | À propos | Loisirs |
+|---|---|---|
+| ![Accueil](screenshots/home-desktop.png) | ![À propos](screenshots/propos-thumb.png) | ![Loisirs](screenshots/loisir-thumb.png) |
+
+| Contact | Accueil (mobile) | Menu mobile |
+|---|---|---|
+| ![Contact](screenshots/contact-thumb.png) | ![Accueil mobile](screenshots/mobile-home.png) | ![Menu mobile ouvert](screenshots/mobile-menu-open.png) |
 
 ## 🎯 L'histoire du projet
 
@@ -37,21 +47,21 @@ Une fois la reproduction terminée, l'idée a grandi : ajouter une page « À pr
 
 ## 📂 Structure
 
-```
 online-cv/
-├── index.html          # Accueil — le CV reproduit depuis Canva
-├── propos.html         # Présentation, projets, témoignages
-├── loisir.html         # Loisirs + galerie AGCCI 4 (carrousel)
-├── contact.html        # Formulaire de contact (Formspree)
-├── 404.html             # Page d'erreur personnalisée
+├── index.html # Accueil — le CV reproduit depuis Canva
+├── propos.html # Présentation, projets, témoignages
+├── loisir.html # Loisirs + galerie AGCCI 4 (carrousel)
+├── contact.html # Formulaire de contact (Formspree)
+├── 404.html # Page d'erreur personnalisée
 ├── css/
-│   └── style.css       # Feuille de style unique, organisée par page
+│ └── style.css # Feuille de style unique, organisée par page
 ├── js/
-│   └── main.js          # Script commun (menu, carrousel)
-├── images/               # Ressources optimisées
-├── NPS-Cv-Pro.pdf       # Le CV Canva original
+│ └── main.js # Script commun (menu, carrousel)
+├── images/ # Ressources optimisées
+├── screenshots/ # Captures d'écran pour ce README
+├── NPS-Cv-Pro.pdf # Le CV Canva original
 └── LICENSE
-```
+
 
 ## 🚀 Lancer en local
 
