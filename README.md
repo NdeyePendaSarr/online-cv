@@ -11,9 +11,9 @@
 
 ## 📸 Aperçu
 
-| Accueil (desktop) | À propos | Loisirs |
+| Accueil (desktop) | Projets | Loisirs |
 |---|---|---|
-| ![Accueil](screenshots/home-desktop.png) | ![À propos](screenshots/propos-thumb.png) | ![Loisirs](screenshots/loisir-thumb.png) |
+| ![Accueil](screenshots/home-desktop.png) | ![Projets](screenshots/projects.png) | ![Loisirs](screenshots/loisir-thumb.png) |
 
 | Contact | Accueil (mobile) | Menu mobile |
 |---|---|---|
