@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0F056B">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Page introuvable — CV de Ndeye Penda Sarr">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Page introuvable — NPS — CV</title>
+  <style>
+    .page-404 { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 48px 24px; }
+    .page-404 .code { font-family: var(--font-display); font-size: clamp(5rem, 18vw, 9rem); color: var(--color-primary); line-height: 1; }
+    .page-404 h1 { font-family: var(--font-display); text-transform: uppercase; color: var(--color-primary); font-size: clamp(1.4rem, 4vw, 2rem); margin: 8px 0 12px; }
+    .page-404 p { color: var(--color-muted); max-width: 420px; margin-bottom: 28px; }
+    .btn-retour { display: inline-block; background-color: var(--color-primary); color: var(--color-white); text-decoration: none; text-transform: uppercase; font-family: var(--font-display); font-size: 1.1rem; padding: 12px 28px; border-radius: var(--radius); transition: background-color var(--transition), color var(--transition), transform var(--transition); }
+    .btn-retour:hover { background-color: var(--color-accent); color: var(--color-primary); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="logo-container">
+      <img src="images/logo-nps.jpg" alt="Logo NPS" class="logo" width="260" height="240">
+      <p class="site-title">CV — Professionnel</p>
+    </div>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></label>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="propos.html">À propos</a></li>
+        <li><a href="loisir.html">Loisirs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-404">
+    <p class="code" aria-hidden="true">404</p>
+    <h1>Page introuvable</h1>
+    <p>Oups ! La page que vous cherchez n'existe pas ou a été déplacée. Pas de panique : le CV, lui, est toujours là.</p>
+    <a href="index.html" class="btn-retour">Retour à l'accueil</a>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer-links" aria-label="Réseaux sociaux">
+      <li><a href="https://wa.me/221768845316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://github.com/NdeyePendaSarr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://gitlab.com/NPS_Geek" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-gitlab"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+    <p>&copy; 2024 – 2026 Ndeye Penda Sarr | Tous droits réservés</p>
+  </footer>
+  <a href="#top" class="back-to-top" aria-label="Retour en haut de page"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
