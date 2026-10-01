@@ -31,10 +31,11 @@
       <img src="images/logo-nps.jpg" alt="Logo NPS" class="logo">
       <p class="site-title">CV — Professionnel</p>
     </div>
-    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
-    <nav id="menu" aria-label="Navigation principale">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></label>
+    <nav aria-label="Navigation principale">
       <ul>
-        <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+        <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="propos.html">À propos</a></li>
         <li><a href="loisir.html">Loisirs</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -45,24 +46,24 @@
   <main id="conteneur">
     <!-- Note CV figé -->
     <div class="cv-version-note" role="note">
-      <i class="fas fa-info-circle" aria-hidden="true"></i> Ce CV est une démonstration technique figée à 2024. Pour mon parcours à jour, consultez mon <a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener">profil LinkedIn</a>.
+      <i class="fas fa-info-circle"></i> Ce CV est une démonstration technique figée à 2024. Pour mon parcours à jour, consultez mon <a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener">profil LinkedIn</a>.
     </div>
 
     <div class="left">
       <img src="images/profile-photo.jpg" alt="Photo de profil de Ndeye Penda Sarr" width="670" height="700">
       <div class="coordonnees">
-        <h2>Coordonnées</h2>
+        <h4>Coordonnées</h4>
         <ul>
-          <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+221768845316">+221 76 884 53 16</a></li>
-          <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:ndasarr884@gmail.com">ndasarr884@gmail.com</a></li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i> +221 76 884 53 16</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> ndasarr884@gmail.com</li>
           <li><i class="fa fa-home" aria-hidden="true"></i> Mbour</li>
         </ul>
-        <h2>Langues</h2>
+        <h4>Langues</h4>
         <ul class="langues">
           <li>
             <div class="langue-item">
               <span>Français</span>
-              <div class="progress-bar" role="img" aria-label="Niveau : courant (90 %)">
+              <div class="progress-bar">
                 <div class="progress" style="--level: 90%;"></div>
               </div>
             </div>
@@ -70,21 +71,21 @@
           <li>
             <div class="langue-item">
               <span>Anglais</span>
-              <div class="progress-bar" role="img" aria-label="Niveau : intermédiaire (60 %)">
+              <div class="progress-bar">
                 <div class="progress" style="--level: 60%;"></div>
               </div>
             </div>
           </li>
         </ul>
-        <h2>Compétences</h2>
+        <h4>Compétences</h4>
         <ul>
           <li>Java, JEE</li><li>JavaScript</li><li>Python, PHP</li><li>HTML, CSS</li><li>SQL, UML</li><li>WordPress</li><li>Tailwind</li>
         </ul>
-        <h2>Outils</h2>
+        <h4>Outils</h4>
         <ul>
           <li>PostgreSQL, SQL Server, MySQL</li><li>Eclipse IDE, IntelliJ</li><li>Visual Studio Code</li><li>Docker, Git</li>
         </ul>
-        <h2>Centres d'intérêts</h2>
+        <h4>Centres d'intérêts</h4>
         <ul>
           <li>Vidéos sur le développement</li><li>Conférences techniques</li><li>Films sur l'informatique</li><li>Contemplation de la nature</li>
         </ul>
@@ -143,12 +144,12 @@
 
   <footer class="footer">
     <ul class="footer-links" aria-label="Réseaux sociaux">
-      <li><a href="https://wa.me/221768845316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-      <li><a href="https://github.com/NdeyePendaSarr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-      <li><a href="https://gitlab.com/NPS_Geek" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-gitlab" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="https://wa.me/221768845316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://github.com/NdeyePendaSarr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://gitlab.com/NPS_Geek" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-gitlab"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
     </ul>
-    <p>&copy; 2024 – 2026 Ndeye Penda Sarr | Code sous licence MIT · contenus personnels réservés</p>
+    <p>&copy; 2024 – 2026 Ndeye Penda Sarr | Tous droits réservés</p>
   </footer>
   <a href="#top" class="back-to-top" aria-label="Retour en haut de page"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
 

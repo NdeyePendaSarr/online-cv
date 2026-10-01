@@ -60,7 +60,7 @@ Cette version historique a été conservée afin de préserver l'intégrité du 
 - **Formspree** — traitement du formulaire de contact sans backend
 - **GitHub Pages** — hébergement et déploiement
 
-Aucun framework ni bibliothèque front-end n'est utilisé.
+Aucun framework front-end. Seules deux ressources externes sont chargées : Font Awesome (icônes) et Google Fonts (polices).
 
 ---
 
@@ -70,12 +70,12 @@ Aucun framework ni bibliothèque front-end n'est utilisé.
 
 - Timeline CSS construite avec des pseudo-éléments positionnés relativement à chaque entrée.
 - Utilisation combinée de **Flexbox** et **CSS Grid**.
-- Quatre points de rupture pour adapter l'interface du mobile 360px aux grands écrans.
+- Cinq points de rupture pour adapter l'interface du mobile 360px aux grands écrans.
 - Utilisation de `clamp()` pour certaines dimensions responsives.
 
 ### 🍔 Navigation
 
-- Menu burger réalisé en **CSS pur** à l'aide du mécanisme de checkbox.
+- Menu burger accessible : bouton avec `aria-expanded`, fermeture avec Échap.
 - Gestion de certaines interactions complémentaires en JavaScript.
 
 ### 🖼️ Carrousel
@@ -109,71 +109,37 @@ Aucun framework ni bibliothèque front-end n'est utilisé.
 
 ## 📂 Structure du projet
 
+```
 online-cv/
-├── index.html                
-├── propos.html              
-├── loisir.html               
-├── contact.html             
-├── 404.html                  
-│
-├── css/
-│   └── style.css              
-│
-├── js/
-│   └── main.js                
-│
-├── images/                   
-├── screenshots/              
-├── NPS-Cv-Pro.pdf            
+├── index.html · propos.html · loisir.html · contact.html · 404.html
+├── css/style.css
+├── js/main.js
+├── images/
+├── screenshots/
+├── NPS-Cv-Pro.pdf
+├── .github/workflows/check.yml   # vérification des liens et du HTML
 └── LICENSE
+```
 
-🚀 Lancer le projet en local
+## 🚀 Lancer le projet en local
 
-Le projet ne nécessite aucune installation de dépendances ni étape de build.
+Aucune dépendance, aucun build.
 
-1. Cloner le dépôt
+```bash
 git clone https://github.com/NdeyePendaSarr/online-cv.git
 cd online-cv
-2. Lancer un serveur local
+python -m http.server 8000   # puis http://localhost:8000
+```
 
-Avec Python :
+Ouvrir `index.html` directement dans un navigateur fonctionne aussi.
 
-python -m http.server 8000
+## 📄 Licence
 
-Puis ouvrir :
+Code sous licence MIT (voir `LICENSE`). Les contenus personnels (CV, textes, photographies) restent ma propriété.
 
-http://localhost:8000
+## 👩🏾‍💻 Autrice
 
-Il est également possible d'ouvrir directement index.html dans un navigateur.
-
-🎓 Compétences mises en pratique
-
-Ce projet m'a permis de consolider plusieurs fondamentaux du développement web :
-
-structuration sémantique d'une page HTML ;
-conception d'interfaces responsive ;
-CSS moderne sans framework ;
-manipulation du DOM avec JavaScript ;
-accessibilité web ;
-optimisation des ressources ;
-conception d'une navigation multi-pages ;
-intégration d'un formulaire externe ;
-utilisation de Git et GitHub ;
-déploiement d'un site statique avec GitHub Pages.
-📄 Licence
-
-Ce projet est distribué sous licence MIT — voir le fichier LICENSE.
-
-Le code est librement réutilisable conformément à la licence. Les contenus personnels présents dans le projet (CV, textes, photographies et autres éléments personnels) restent ma propriété.
-
-👩🏾‍💻 Autrice
-
-Ndeye Penda Sarr
-Développeuse Web Full-Stack · Business Intelligence & Data
-Dakar 🇸🇳
-
-GitHub : @NdeyePendaSarr
-GitLab : @NPS_Geek
-LinkedIn : https://www.linkedin.com/in/ndeye-penda-sarr-493150318/
+**Ndeye Penda Sarr** — Développeuse Web Full-Stack · Business Intelligence & Data — Dakar 🇸🇳
+[GitHub](https://github.com/NdeyePendaSarr) · [GitLab](https://gitlab.com/NPS_Geek) · [LinkedIn](https://www.linkedin.com/in/ndeye-penda-sarr-493150318/)
 
 © 2024–2026 Ndeye Penda Sarr

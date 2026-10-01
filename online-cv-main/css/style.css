@@ -53,12 +53,9 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline:        3px solid var(--color-primary);
+  outline:        3px solid var(--color-accent);
   outline-offset: 2px;
 }
-.header :focus-visible,
-.footer :focus-visible,
-.back-to-top:focus-visible { outline-color: var(--color-accent); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -80,7 +77,6 @@ body {
 
 /* Note explicative CV */
 .cv-version-note {
-  flex: 0 0 100%;
   background-color: var(--color-light);
   color: var(--color-primary);
   font-size: 0.9rem;
@@ -167,10 +163,9 @@ nav ul li a.active {
   letter-spacing: 0.04em;
 }
 
-.menu-toggle {
+#check    { display: none; }
+.checkbtn {
   display:       none;
-  background:    none;
-  border:        0;
   font-size:     28px;
   color:         var(--color-white);
   cursor:        pointer;
@@ -179,7 +174,7 @@ nav ul li a.active {
   border-radius: 6px;
   transition:    background-color var(--transition);
 }
-.menu-toggle:hover { background-color: rgba(255, 255, 255, 0.12); }
+.checkbtn:hover { background-color: rgba(255, 255, 255, 0.12); }
 
 .footer {
   background-color: var(--color-primary);
@@ -279,7 +274,7 @@ nav ul li a.active {
   margin-top:              2.5rem;
 }
 
-.coordonnees h2 {
+.coordonnees h4 {
   font-family:    var(--font-display);
   text-transform: uppercase;
   color:          var(--color-primary);
@@ -287,7 +282,7 @@ nav ul li a.active {
   margin:         2.25rem 0 0.625rem 1.25rem;
 }
 
-.coordonnees h2:first-of-type { margin-top: 0.625rem; }
+.coordonnees h4:first-of-type { margin-top: 0.625rem; }
 
 .coordonnees ul {
   list-style:   none;
@@ -992,33 +987,35 @@ nav ul li a.active {
   resize:     vertical;
 }
 
+.form input[type="submit"],
+.form input[type="reset"] {
+  padding:        0.625rem 1.375rem;
+  border:         none;
+  border-radius:  6px;
+  font-family:    var(--font-display);
+  font-size:      1.15rem;
+  text-transform: uppercase;
+  cursor:         pointer;
+  transition:     background-color var(--transition), color var(--transition);
+}
+
 .form input[type="submit"] {
-  display:          block;
-  width:            100%;
-  padding:          0.8rem 1.5rem;
-  border:           2px solid var(--color-primary);
-  border-radius:    8px;
   background-color: var(--color-primary);
   color:            var(--color-white);
-  font-family:      var(--font-display);
-  font-size:        1.3rem;
-  letter-spacing:   0.08em;
-  text-transform:   uppercase;
-  cursor:           pointer;
-  box-shadow:       var(--shadow-md);
-  transition:       background-color var(--transition), color var(--transition),
-                    border-color var(--transition), transform var(--transition);
 }
-.form p > input[type="submit"] { grid-column: 1 / -1; grid-row: auto; }
-.form input[type="submit"]:hover:not(:disabled) {
+.form input[type="submit"]:hover {
   background-color: var(--color-accent);
-  border-color:     var(--color-accent);
   color:            var(--color-primary);
-  transform:        translateY(-2px);
 }
-.form input[type="submit"]:active:not(:disabled) { transform: none; }
-.form input[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
 
+.form input[type="reset"] {
+  background-color: #888;
+  color:            var(--color-white);
+}
+.form input[type="reset"]:hover {
+  background-color: var(--color-accent);
+  color:            var(--color-primary);
+}
 
 .form-message {
   max-width: 600px;
@@ -1027,6 +1024,8 @@ nav ul li a.active {
   border-radius: var(--radius);
   font-size: 0.9rem;
   text-align: center;
+  role: alert;
+  aria-live: assertive;
 }
 .form-message-success {
   background-color: #d4edda;
@@ -1046,7 +1045,7 @@ nav ul li a.active {
 }
 .optional {
   font-size: 0.8rem;
-  color: var(--color-muted);
+  color: #888;
   font-weight: normal;
   text-transform: none;
   margin-left: 4px;
@@ -1071,7 +1070,7 @@ nav ul li a.active {
 }
 
 @media (max-width: 858px) {
-   .menu-toggle {
+  .checkbtn {
     display:     block;
     margin-left: auto;
   }
@@ -1080,21 +1079,19 @@ nav ul li a.active {
     top:              var(--header-height);
     left:             -100%;
     width:            100%;
-    height:           auto;
-    bottom:           0;
-    visibility:       hidden;
+    height:           100vh;
     background-color: var(--color-primary);
     flex-direction:   column;
     align-items:      center;
     justify-content:  flex-start;
     padding-top:      2rem;
     gap:              0;
-    transition:       left var(--transition), visibility 0s linear var(--transition);
+    transition:       left var(--transition);
     z-index:          90;
   }
   nav ul li { margin: 1rem 0; }
   nav ul li a { font-size: 1rem; }
-  nav.open ul { left: 0; visibility: visible; transition: left var(--transition); }
+  #check:checked ~ nav ul { left: 0; }
 }
 
 @media (max-width: 768px) {
@@ -1121,13 +1118,14 @@ nav ul li a.active {
   .form input.stylePlaceholder,
   .form textarea.textarea-placeholder { font-size: 0.9rem; padding: 0.5625rem; }
   .form label { font-size: 0.85rem; }
-  .form input[type="submit"] { font-size: 1.1rem; padding: 0.7rem 1rem; }
+  .form input[type="submit"],
+  .form input[type="reset"] { font-size: 1rem; padding: 0.5625rem 1rem; }
 }
 
 @media (max-width: 480px) {
   .left > img { width: 150px; height: 150px; }
   .coordonnees { border-top-right-radius: 32px; }
-  .coordonnees h2 { margin-left: 0; }
+  .coordonnees h4 { margin-left: 0; }
   .coordonnees ul { padding-left: 0.75rem; }
   .langues { padding-left: 0.75rem; }
   .right > h1 { font-size: 2.2rem; }
@@ -1153,7 +1151,13 @@ nav ul li a.active {
   .form input.stylePlaceholder,
   .form textarea.textarea-placeholder { font-size: 0.85rem; padding: 0.5rem; }
   .form label { font-size: 0.8rem; }
-  .form input[type="submit"] { font-size: 1.05rem; padding: 0.7rem; }
+  .form input[type="submit"],
+  .form input[type="reset"] {
+    width:     100%;
+    margin:    0.25rem 0;
+    font-size: 1rem;
+    padding:   0.5625rem;
+  }
 }
 
 /* ============================================================
@@ -1218,6 +1222,3 @@ nav ul li a.active {
     background-color: #333;
   }
 }
-
-/* Ajouts accessibilité / loisirs */
-.coordonnees a { color: inherit; }

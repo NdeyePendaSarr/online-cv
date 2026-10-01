@@ -1,0 +1,18 @@
+name: check
+on: [push, pull_request]
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --include-fragments "**/*.html"
+          fail: true
+  html:
+    runs-on: ubuntu-latest
+    continue-on-error: true   # informatif : à rendre bloquant une fois les alertes traitées
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo '{"extends":["html-validate:recommended"],"rules":{"no-inline-style":"off"}}' > .htmlvalidate.json
+      - run: npx --yes html-validate "*.html"

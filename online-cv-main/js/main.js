@@ -6,23 +6,61 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   /* --------------------------------------------------------
-     1. Menu burger accessible (bouton + aria-expanded)
+     1. Chargement dynamique header / footer
      -------------------------------------------------------- */
-  const btn = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('menu');
-  if (btn && nav) {
-    const setOpen = open => {
-      btn.setAttribute('aria-expanded', String(open));
-      btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
-      nav.classList.toggle('open', open);
-    };
-    btn.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
-    nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
+  loadComponent('header', 'components/header.html');
+  loadComponent('footer', 'components/footer.html');
+
+  function loadComponent(selector, url) {
+    const element = document.querySelector(selector);
+    if (!element) return;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) throw new Error(`Erreur ${response.status}`);
+        return response.text();
+      })
+      .then(html => {
+        element.outerHTML = html;
+        if (selector === 'header') {
+          setActiveNavLink();
+        }
+      })
+      .catch(err => {
+        console.warn(`Composant ${selector} non chargé :`, err.message);
+        if (selector === 'header') {
+          const warning = document.createElement('div');
+          warning.className = 'header-fallback-warning';
+          warning.textContent = '⚠️ Menu de navigation limité (chargement impossible).';
+          warning.style.cssText = 'background:#ffcc00;color:#0F056B;text-align:center;padding:0.5rem;font-size:0.9rem;';
+          const header = document.querySelector('header');
+          header && header.insertAdjacentElement('afterend', warning);
+        }
+      });
+  }
+
+  function setActiveNavLink() {
+    const currentPage = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a').forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
   }
 
   /* --------------------------------------------------------
-     2. Carrousel galerie avec désactivation des flèches
+     2. Menu burger
+     -------------------------------------------------------- */
+  window.addEventListener('scroll', function () {
+    const check = document.getElementById('check');
+    if (check && check.checked) {
+      check.checked = false;
+    }
+  });
+
+  /* --------------------------------------------------------
+     3. Carrousel galerie avec désactivation des flèches
      -------------------------------------------------------- */
   const galleries = document.querySelectorAll('.camp-gallery');
   galleries.forEach(gallery => {
@@ -60,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* --------------------------------------------------------
-     3. Formulaire AJAX (Formspree)
+     4. Formulaire AJAX (Formspree)
      -------------------------------------------------------- */
   const contactForm = document.querySelector('form[action*="formspree.io"]');
   if (contactForm) {
@@ -82,9 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
           form.reset();
           showMessage('Message envoyé avec succès ! Merci.', 'success');
         } else {
-          const data = await response.json().catch(() => ({}));
-          const detail = (data.errors || []).map(e => e.message).join(' ') || data.error;
-          throw new Error(detail || "Le serveur a refusé l'envoi. Réessaie ou écris-moi par email.");
+          const result = await response.json();
+          throw new Error(result.error || 'Erreur serveur.');
         }
       } catch (err) {
         console.error(err);

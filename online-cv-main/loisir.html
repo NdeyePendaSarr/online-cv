@@ -30,12 +30,13 @@
       <img src="images/logo-nps.jpg" alt="Logo NPS" class="logo">
       <p class="site-title">CV — Professionnel</p>
     </div>
-    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
-    <nav id="menu" aria-label="Navigation principale">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></label>
+    <nav aria-label="Navigation principale">
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="propos.html">À propos</a></li>
-        <li><a href="loisir.html" class="active" aria-current="page">Loisirs</a></li>
+        <li><a href="loisir.html" class="active">Loisirs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -47,17 +48,19 @@
       <a class="hobby-card" href="https://www.youtube.com/watch?v=XJYRhQUjS6I" target="_blank" rel="noopener noreferrer">
         <div class="hobby-media">
           <img src="https://img.youtube.com/vi/XJYRhQUjS6I/hqdefault.jpg" alt="Vidéos de développement web" class="hobby-img" width="480" height="360" loading="lazy">
-          <span class="hobby-play"><i class="fas fa-play" aria-hidden="true"></i></span>
+          <span class="hobby-play"><i class="fas fa-play"></i></span>
         </div>
         <div class="hobby-caption"><h3>Vidéos de développement web</h3><p>Inspirée par des créateurs comme Benjamin Code</p></div>
       </a>
-      <a class="hobby-card" href="https://www.youtube.com/watch?v=QNniSdgwYMc" target="_blank" rel="noopener noreferrer">
+      <div class="hobby-card">
         <div class="hobby-media">
-          <img src="https://img.youtube.com/vi/QNniSdgwYMc/hqdefault.jpg" alt="Bande-annonce de la série Silicon Valley" class="hobby-img" width="480" height="360" loading="lazy">
-          <span class="hobby-play"><i class="fas fa-play" aria-hidden="true"></i></span>
+          <video class="hobby-video" controls preload="none" poster="images/silicon-poster.jpg" width="600" height="338">
+            <source src="images/silicon.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la lecture vidéo.
+          </video>
         </div>
         <div class="hobby-caption"><h3>Silicon Valley &amp; Scorpion</h3><p>Séries qui nourrissent ma vision de la tech</p></div>
-      </a>
+      </div>
       <a class="hobby-card" href="images/hobby-sea-contemplation.jpg" target="_blank" rel="noopener noreferrer">
         <div class="hobby-media"><img src="images/hobby-sea-contemplation.jpg" alt="Contempler la nature, face à la mer" class="hobby-img" width="900" height="847"></div>
         <div class="hobby-caption"><h3>Contempler la nature</h3><p>Ciel, mer et instants de sérénité</p></div>
@@ -71,11 +74,11 @@
           <p>AGCCI 4 - SheCodesFrom2021 (Jigéen Gestu Digitaal)</p>
         </div>
         <div class="camp-gallery-arrows">
-          <button type="button" class="camp-gallery-arrow prev" aria-label="Photo précédente"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-          <button type="button" class="camp-gallery-arrow next" aria-label="Photo suivante"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" class="camp-gallery-arrow prev" aria-label="Photo précédente"><i class="fas fa-chevron-left"></i></button>
+          <button type="button" class="camp-gallery-arrow next" aria-label="Photo suivante"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
-      <div class="camp-gallery-track">
+      <div class="camp-gallery-track" aria-live="polite">
         <a class="camp-photo" href="images/camp-01.jpg" target="_blank" rel="noopener noreferrer"><img src="images/camp-01.jpg" width="600" height="900" alt="Camp de codage AGCCI 4 — photo 1" loading="lazy"></a>
         <a class="camp-photo" href="images/camp-02.jpg" target="_blank" rel="noopener noreferrer"><img src="images/camp-02.jpg" width="900" height="675" alt="Camp de codage AGCCI 4 — photo 2" loading="lazy"></a>
         <a class="camp-photo" href="images/camp-03.jpg" target="_blank" rel="noopener noreferrer"><img src="images/camp-03.jpg" width="900" height="675" alt="Camp de codage AGCCI 4 — photo 3" loading="lazy"></a>
@@ -92,12 +95,12 @@
 
   <footer class="footer">
     <ul class="footer-links" aria-label="Réseaux sociaux">
-      <li><a href="https://wa.me/221768845316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-      <li><a href="https://github.com/NdeyePendaSarr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-      <li><a href="https://gitlab.com/NPS_Geek" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-gitlab" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+      <li><a href="https://wa.me/221768845316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://github.com/NdeyePendaSarr/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://gitlab.com/NPS_Geek" target="_blank" rel="noopener noreferrer" aria-label="GitLab"><i class="fab fa-gitlab"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/ndeye-penda-sarr-493150318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
     </ul>
-    <p>&copy; 2024 – 2026 Ndeye Penda Sarr | Code sous licence MIT · contenus personnels réservés</p>
+    <p>&copy; 2024 – 2026 Ndeye Penda Sarr | Tous droits réservés</p>
   </footer>
   <a href="#top" class="back-to-top" aria-label="Retour en haut de page"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
 
