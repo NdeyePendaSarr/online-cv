@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-> **Challenge personnel réalisé en 2024 :** reproduire fidèlement mon CV conçu sur Canva en HTML et CSS purs, sans framework ni bibliothèque, puis transformer cette reproduction en un véritable site web multi-pages.
+> **Challenge personnel réalisé en 2024 :** reproduire fidèlement mon CV conçu sur Canva en HTML et CSS purs, sans framework, puis transformer cette reproduction en un véritable site web multi-pages.
 
 🔗 **Démo en ligne :** https://ndeyependasarr.github.io/online-cv/
 
@@ -76,7 +76,14 @@ Aucun framework front-end. Seules deux ressources externes sont chargées : Font
 ### 🍔 Navigation
 
 - Menu burger accessible : bouton avec `aria-expanded`, fermeture avec Échap.
-- Gestion de certaines interactions complémentaires en JavaScript.
+- Page active signalée avec `aria-current="page"`.
+- Navigation complète au clavier (Tab, Entrée, Échap).
+
+### 📬 Formulaire de contact
+
+- Envoi en AJAX via Formspree, sans rechargement de la page.
+- Message de succès ou d'erreur annoncé aux lecteurs d'écran (`role="alert"`), avec défilement automatique vers le message.
+- Champ anti-spam (*honeypot*) et validation HTML5 du téléphone, qui accepte les numéros internationaux.
 
 ### 🖼️ Carrousel
 
@@ -87,17 +94,23 @@ Aucun framework front-end. Seules deux ressources externes sont chargées : Font
 ### ♿ Accessibilité
 
 - Lien d'évitement (*skip link*).
-- États `:focus-visible`.
+- États `:focus-visible` avec un contour contrasté (bleu sur fond clair, jaune sur le header).
 - Attributs `aria-label`.
 - Textes alternatifs descriptifs pour les images.
 - Prise en compte de `prefers-reduced-motion`.
 
 ### ⚡ Performance
 
-- Images optimisées et compressées.
 - `loading="lazy"` pour les ressources adaptées.
 - Dimensions `width` / `height` déclarées afin de limiter les décalages de mise en page (*layout shift*).
 - `preconnect` pour les ressources externes nécessaires.
+
+### ✅ Qualité
+
+Un workflow GitHub Actions (`.github/workflows/check.yml`) vérifie à chaque push :
+
+- que tous les liens et chemins locaux des pages HTML existent (*lychee*) ;
+- la validité du HTML (*html-validate*).
 
 ### 🔗 Partage et référencement
 
@@ -115,7 +128,8 @@ online-cv/
 ├── css/style.css
 ├── js/main.js
 ├── images/
-├── screenshots/
+├── screenshots/                  # captures du README
+├── scripts/screenshots.py        # régénère les captures
 ├── NPS-Cv-Pro.pdf
 ├── .github/workflows/check.yml   # vérification des liens et du HTML
 └── LICENSE
@@ -132,6 +146,18 @@ python -m http.server 8000   # puis http://localhost:8000
 ```
 
 Ouvrir `index.html` directement dans un navigateur fonctionne aussi.
+
+## 🖼️ Mettre à jour les captures d'écran
+
+Les images du README sont générées automatiquement, avec les polices et icônes réelles du site (connexion Internet requise) :
+
+```bash
+pip install playwright
+playwright install chromium
+python scripts/screenshots.py
+```
+
+Elles sont écrites dans `screenshots/` sous les mêmes noms que ceux utilisés plus haut.
 
 ## 📄 Licence
 

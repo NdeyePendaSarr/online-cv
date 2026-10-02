@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
       msg.setAttribute('aria-live', 'assertive');
       msg.textContent = text;
       contactForm.parentNode.insertBefore(msg, contactForm);
+      // Ramène le message dans la zone visible (le bouton Soumettre est en bas du formulaire)
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      msg.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
       setTimeout(() => msg.remove(), 10000);
     }
   }
