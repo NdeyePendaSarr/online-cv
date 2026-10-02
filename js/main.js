@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       const form = e.target;
-      const submitBtn = form.querySelector('input[type="submit"]');
-      const originalText = submitBtn.value;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
       submitBtn.disabled = true;
-      submitBtn.value = 'Envoi en cours…';
+      submitBtn.textContent = 'Envoi en cours…';
 
       try {
         const response = await fetch(form.action, {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showMessage(err.message || 'Erreur réseau, veuillez réessayer.', 'error');
       } finally {
         submitBtn.disabled = false;
-        submitBtn.value = originalText;
+        submitBtn.textContent = originalText;
       }
     });
 
